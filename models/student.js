@@ -21,6 +21,10 @@ const studentClassSchema = new Schema({
         type: Number,
         default: 0,
     },
+    generatedSummary: {
+        type: String,
+        default: ""
+    },
     observations: [studentObservationSchema],
 })
 const studentSchema = new Schema({
