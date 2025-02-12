@@ -4,6 +4,7 @@ import { getStudentById } from "../../controllers/students/getStudentById.js";
 import { addStudent } from "../../controllers/students/addStudent.js";
 import { getStudentsByClassId } from "../../controllers/students/getStudentsByClass.js";
 import { generateSummary } from "../../controllers/students/generateSummary.js";
+import { updateStudent } from "../../controllers/students/updateStudent.js";
 
 export const router = express.Router();
 
@@ -11,6 +12,7 @@ router.get("/class/:classId", getStudentsByClassId);
 router.get("/", getStudents);
 router.get("/:id", getStudentById);
 router.post("/", addStudent);
+router.put("/:id/class/:classId/update", updateStudent);
 
 
 // router.put("/:id");
